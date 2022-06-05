@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]     = { "Hack:size=10:antialias=true:autohint=true",
-								"fontawesome:size=12:antialias=true:autohint=true",
+								"Mononoki Nerd Font:size=9:antialias=true:autohint=true",
                                   "JoyPixels:size=10:antialias=true:autohint=true"
 						     	};
 static const char dmenufont[]       = "Hack:size=10:antialias=true:autohint=true";
@@ -93,8 +93,19 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ 0, XF86XK_TouchpadToggle,			spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
-
+	// { MODKEY,                       XK_b,      spawn,          SHCMD("brave") },
+	// { MODKEY,                       XK_r,      spawn,          SHCMD("ranger") },
+	// { MODKEY,                       XK_p,      spawn,          SHCMD("pcmanfm") },
+	// { 0, XF86XK_AudioMute,					spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
+	// { 0, XF86XK_AudioRaiseVolume,		spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	// { 0, XF86XK_AudioLowerVolume,		spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	// { 0, XF86XK_AudioPrev,					spawn,		SHCMD("playerctl previous") },
+	// { 0, XF86XK_AudioNext,					spawn,		SHCMD("playerctl next") },
+	// { 0, XF86XK_AudioPause,					spawn,		SHCMD("playerctl play-pause") },
+	// { 0, XF86XK_AudioPlay,					spawn,		SHCMD("playerctl play-pause") },
+	// { 0, XF86XK_TouchpadToggle,			spawn,		SHCMD("(synclient | grep 'TouchpadOff.*1' && synclient TouchpadOff=0) || synclient TouchpadOff=1") },
+	// { 0, XF86XK_MonBrightnessUp,		spawn,		SHCMD("xbacklight -inc 10") },
+	// { 0, XF86XK_MonBrightnessDown,	spawn,		SHCMD("xbacklight -dec 10") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
